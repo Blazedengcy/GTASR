@@ -54,7 +54,7 @@ __phase_configs:
         name: ImageNet
         # name: afhqv2_256
         type: RealESRGANDataset
-        dir_paths: ['/home/dcs_2024/Data/ILSVRC2012_img_train']
+        dir_paths: ['/Data/ILSVRC2012_img_train']
         im_exts: ['JPEG', 'png']
         io_backend:
           type: disk
@@ -97,10 +97,8 @@ __phase_configs:
         name: ImageNet
         # name: afhqv2_256
         type: PairedImageDataset
-        dataroot_gt: /home/dcs_2024/Data/imagenet256/gt
-        dataroot_lq: /home/dcs_2024/Data/imagenet256/lq
-        # dataroot_gt: ./validation/afhqv2_256/bicx4/gt
-        # dataroot_lq: ./validation/ImageNet/Bicubicx4/lq_opencv
+        dataroot_gt: /imagenet256/gt
+        dataroot_lq: /imagenet256/lq
         mean: 0.5
         std: 0.5
         gt_size: 256
@@ -350,7 +348,7 @@ __phase_configs:
         name: ImageNet
         # name: afhqv2_256
         type: RealESRGANDataset
-        dir_paths: ['/home/dcs_2024/Data/ILSVRC2012_img_train',]
+        dir_paths: ['/Data/ILSVRC2012_img_train',]
         im_exts: ['JPEG', 'png']
         io_backend:
           type: disk
@@ -393,8 +391,8 @@ __phase_configs:
         name: ImageNet
         # name: afhqv2_256
         type: PairedImageDataset
-        dataroot_gt: /home/dcs_2024/Data/imagenet256/gt
-        dataroot_lq: /home/dcs_2024/Data/imagenet256/lq
+        dataroot_gt: /imagenet256/gt
+        dataroot_lq: /imagenet256/lq
         # dataroot_gt: ./validation/afhqv2_256/bicx4/gt
         # dataroot_lq: ./validation/ImageNet/Bicubicx4/lq_opencv
         mean: 0.5
@@ -456,10 +454,8 @@ __phase_configs:
 
     # path
     path:
-      pretrain_network_g: ~     #把第一阶段训练好的权重放在这里
-      # pretrain_network_g: experiments/CT_bicx4_imagenet_sigma_2_noise_rho_1_res_rho_1_edm_unet_lpips_step_4_position_emb_bs8_30w/models/net_g_240000.pth
+      pretrain_network_g: GTASR_first_phase.pth     #把第一阶段训练好的权重放在这里
       strict_load_g: true
-      # resume_state: experiments/CT_bicx4_imagenet_sigma_2_noise_rho_1_res_rho_1_edm_unet_lpips_step_4_position_emb_bs8_30w/training_states/240000.state
       resume_state: ~
 
     # training settings
@@ -534,7 +530,7 @@ __phase_configs:
         pixel_weight: 1
         cond_lq: True
         use_enc: True
-        model_path: ~
+        model_path: GTASR_first_phase.pth    #把第一阶段训练好的权重放在这里
         # loss_opt:
         #   l_opt1:
         #     type: lpips
@@ -628,7 +624,7 @@ __phase_configs:
 
     # logging settings
     logger:
-      print_freq: 2
+      print_freq: 100
       save_checkpoint_freq: !!float 500
       use_tb_logger: false
       wandb:

@@ -44,8 +44,8 @@ datasets:
   val_1:
     name: ImageNet
     type: PairedImageDataset
-    dataroot_gt: /home/dcs_2024/Data/imagenet256/gt
-    dataroot_lq: /home/dcs_2024/Data/imagenet256/lq
+    dataroot_gt: imagenet256/gt
+    dataroot_lq: imagenet256/lq
     mean: 0.5
     std: 0.5
     gt_size: 256
@@ -55,54 +55,34 @@ datasets:
 #   val_2:
 #       name: RealSet65
 #       type: SingleImageDataset
-#       dataroot_lq: /data/zhangquan/data/RealSet65
-#       mean: 0.5
-#       std: 0.5
-#       io_backend:
-#         type: disk
-#   val_3:
-#       name: RealLQ250
-#       type: SingleImageDataset
-#       dataroot_lq: /data/zhangquan/data/RealLQ250/lq
+#       dataroot_lq: RealSet65
 #       mean: 0.5
 #       std: 0.5
 #       io_backend:
 #         type: disk
 
-  # val_4:
-  #   name: Realsr
-  #   type: PairedImageDataset
-  #   dataroot_gt: /data/zhangquan/Project/OSEDiff/preset/datasets/benchmark_realsr/test_HR
-  #   dataroot_lq: /data/zhangquan/Project/OSEDiff/preset/datasets/benchmark_realsr/test_LR
-  #   mean: 0.5
-  #   std: 0.5
-  #   gt_size: 256
-  #   io_backend:
-  #     type: disk
+#   val_3:
+#       name: RealLQ250
+#       type: SingleImageDataset
+#       dataroot_lq: RealLQ250/lq
+#       mean: 0.5
+#       std: 0.5
+#       io_backend:
+#         type: disk
 
 
 #   val_4:
 #     name: Realsr
 #     type: PairedImageDataset
-#     dataroot_gt: /data/zhangquan/data/fusion/gt
-#     dataroot_lq: /data/zhangquan/data/fusion/lq
+#     dataroot_gt: Realsr/gt
+#     dataroot_lq: Realsr/lq
 #     mean: 0.5
 #     std: 0.5
 #     gt_size: 256
 #     io_backend:
 #       type: disk
 
-#   val_5:
-#     name: Drealsr
-#     type: PairedImageDataset
-#     # dataroot_gt: datasets/TestDataSR/HR/B100/x2
-#     dataroot_lq: /data/zhangquan/Project/OSEDiff/preset/datasets/benchmark_drealsr/test_LR
-#     dataroot_gt: /data/zhangquan/Project/OSEDiff/preset/datasets/benchmark_drealsr/test_HR
-#     mean: 0.5
-#     std: 0.5
-#     io_backend:
-#       type: disk
-  
+
 
 
 # network structures
@@ -152,7 +132,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: /home/dcs_2024/GTASR/Codex/GTASR/final.pth
+  pretrain_network_g: GTASR_final_phase.pth
   strict_load_g: true
   param_key_g: params_ema
 # training settings
