@@ -1,4 +1,4 @@
-# Joint Geometric and Trajectory Consistency Learning for One-Step Real-World Super-Resolution
+# Joint Geometric and Trajectory Consistency Learning for One-Step Real-World Super-Resolution (GTASR)
 
 <div align="center">
 
