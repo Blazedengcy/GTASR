@@ -15,8 +15,8 @@ Chengyan Deng<sup>1</sup>, Zhangquan Chen<sup>2</sup>, Li Yu<sup>1†</sup>, Kai
 
 ⭐ If this work is helpful for you, please help star this repo. Thanks! 🤗
 
-<img width="800" src="assets/method.png">
-<img width="800" src="assets/visual_result.png">
+<img width="800" src="pipeline.png">
+<img width="800" src="comparison.png">
 
 </div>
 
@@ -70,7 +70,7 @@ Download and generate the testing data, then update the paths in `options/test`.
 
 ### Pretrained Models
 
-Put pretrained model files in the project root or update `pretrain_network_g` in the test configuration.
+Download the [pretrained model weights](https://huggingface.co/Blaze-UESTC/GTASR/tree/main) and put them in the project root, or update `pretrain_network_g` in the test configuration.
 
 ### Testing Commands
 
