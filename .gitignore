@@ -1,0 +1,33 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Training outputs
+experiments/
+results/
+tb_logger/
+wandb/
+
+# Model/checkpoint artifacts
+*.pth
+*.pt
+*.ckpt
+*.state
+*.safetensors
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
