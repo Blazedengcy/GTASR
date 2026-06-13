@@ -2,17 +2,18 @@
 
 <div align="center">
 
-**Accepted by ICML 2026**
+🎉  **Accepted by ICML 2026**
 
 Chengyan Deng<sup>1</sup>, Zhangquan Chen<sup>2</sup>, Li Yu<sup>1†</sup>, Kai Zhang<sup>3</sup>, Xue Zhou<sup>1</sup>, Wang Zhang<sup>1</sup>
 
 <sup>1</sup>University of Electronic Science and Technology of China  
 <sup>2</sup>Tsinghua University  
 <sup>3</sup>Nanjing University  
-<sup>†</sup>Correspondence to: Li Yu &lt;lyu@uestc.edu.cn&gt;
 
 [![arXiv](https://img.shields.io/badge/arXiv-2602.24240-b31b1b.svg)](https://arxiv.org/abs/2602.24240)
 [![GitHub Stars](https://img.shields.io/github/stars/Blazedengcy/GTASR?style=social)](https://github.com/Blazedengcy/GTASR)
+
+⭐ If this work is helpful for you, please help star this repo. Thanks! 🤗
 
 <img width="800" src="assets/method.png">
 <img width="800" src="assets/visual_result.png">
@@ -57,6 +58,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --use-env --npro
 ```
 
 ```bash
+# batch size = 2 GPUs x 6 per GPU
 CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --use-env --nproc_per_node=2 --master_port=1145 basicsr/train.py -opt options/train/ctmsr_train.yml --launcher pytorch --phase secondphase
 ```
 
@@ -80,27 +82,13 @@ CUDA_VISIBLE_DEVICES=0 python basicsr/test.py -opt options/test/ctmsr_test.yml
 
 ## Evaluation Metrics
 
-### With Ground Truth
-
-Use this command when GT images are available:
-
 ```bash
 python test_metrics.py \
-  --inp_imgs /home/dcs_2024/GTASR/Codex/GTASR/results/ctmsr_test/visualization/ImageNet \
-  --gt_imgs /home/dcs_2024/Data/imagenettest/imagenet256/gt \
-  --log preset/datasets/benchmark_realsr/results_osediff/metrics
+  --inp_imgs GTASR/results/ctmsr_test/visualization/ImageNet \
+  --gt_imgs imagenet256/gt \
+  --log preset/metrics
 ```
 
-### Without Ground Truth
-
-Use `--no_gt` for real-world test sets without GT images:
-
-```bash
-python test_metrics.py \
-  --inp_imgs /home/zw_2024/Blaze/Project/OSEDiff/output_RealLQ250 \
-  --log preset/datasets/benchmark_realsr/results_osediff/metrics \
-  --no_gt
-```
 
 ## Citation
 
