@@ -17,8 +17,8 @@ Chengyan Deng<sup>1</sup>, Zhangquan Chen<sup>2</sup>, Li Yu<sup>1†</sup>, Kai
 
 💬 If you have any questions, please feel free to contact me or open an issue. 
 
-    📧 Email: dengchengyan@std.uestc.std.com
-    💬 WeChat: 15082834585
+📧 Email: dengchengyan@std.uestc.std.com
+💬 WeChat: 15082834585
 
 <img width="800" src="pipeline.png">
 <img width="800" src="comparison.png">
