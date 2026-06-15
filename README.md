@@ -14,6 +14,9 @@ Chengyan Deng<sup>1</sup>, Zhangquan Chen<sup>2</sup>, Li Yu<sup>1†</sup>, Kai
 [![GitHub Stars](https://img.shields.io/github/stars/Blazedengcy/GTASR?style=social)](https://github.com/Blazedengcy/GTASR)
 
 ⭐ If this work is helpful for you, please help star this repo. Thanks! 🤗
+💬 If you have any questions, please feel free to contact me or open an issue. 
+    📧 Email: dengchengyan@std.uestc.std.com
+    💬 WeChat: 15082834585
 
 <img width="800" src="pipeline.png">
 <img width="800" src="comparison.png">
